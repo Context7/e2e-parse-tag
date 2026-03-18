@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** e2f3g6xu2ea-mmwm3v44
+**Document ID:** fq9t7w0rmda-mmwm3v6c
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,24 +10,41 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Elixir: Enum Pipeline
+## Dart: Map Over List
 
-Elixir pipeline that filters even numbers and inspects the result.
+Dart example mapping over a list and printing the result.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
-## Haskell: Filter and Map
+## Bash: Count Files
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Counts files in the current directory using common shell tools.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
+```
+
+
+## Python: Fibonacci Generator
+
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
