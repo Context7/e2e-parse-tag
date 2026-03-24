@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** xqc5iq4hcws-mn4bj8p6
+**Document ID:** vdbh1bmwycb-mn4ypsfo
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,27 +21,14 @@ echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
-## Haskell: Filter and Map
+## JavaScript: Sum Array Elements
 
-A minimal Haskell example filtering odd numbers and squaring them.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
-```
-
-
-## Kotlin: Data Class Copy
-
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
-
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
