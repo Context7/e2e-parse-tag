@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** iy6t17s9j3h-mn4ypsgx
+**Document ID:** z2uh46l4mr-mn62hug1
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,21 +22,6 @@ fn main(){
         println!("{}", line.unwrap());
     }
 }
-```
-
-
-## Python: Fibonacci Generator
-
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
-
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
 ```
 
 
