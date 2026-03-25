@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** zkk94tkx49p-mn62humj
+**Document ID:** 7dbirw90u37-mn63msf6
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -24,29 +24,28 @@ fun main(){
 ```
 
 
-## R: Vector Arithmetic
+## TypeScript: Typed User Model
 
-Simple R vector example computing squares of a sequence.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## C++: Transform Vector
+## Rust: Read Lines
 
-C++ transforms a vector in-place and prints the results.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
