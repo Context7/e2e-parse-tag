@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** z2uh46l4mr-mn62hug1
+**Document ID:** lzevqwto35p-mn62humk
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,29 +10,45 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Rust: Read Lines
+## Go: HTTP Server
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
 
-## Julia: Comprehension
+## SQL: Group and Order
 
-Julia list comprehension generating cubes of a range.
+SQL query that groups by name and orders by count descending.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
+```
+
+
+## Elixir: Enum Pipeline
+
+Elixir pipeline that filters even numbers and inspects the result.
+
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
