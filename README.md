@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** nbvx0rgbwes-mn7ygec3
+**Document ID:** 3esz9xoddik-mn7zqepa
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,45 +10,41 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## TypeScript: Typed User Model
+## SQL: Group and Order
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+SQL query that groups by name and orders by count descending.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
-## Java: Stream Map/Filter
+## Scala: List Pipeline
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
   }
 }
 ```
 
 
-## PHP: JSON Response
+## Swift: Map and Filter
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
