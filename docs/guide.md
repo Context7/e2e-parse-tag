@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** eyr4x0puuic-mn7zqeqs
+**Document ID:** 0rpugb0jkv8d-mn9l8zu3
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,29 +21,14 @@ console.log(total);
 ```
 
 
-## Rust: Read Lines
+## Elixir: Enum Pipeline
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
-```
-
-
-## PHP: JSON Response
-
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
-
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
