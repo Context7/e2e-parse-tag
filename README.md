@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 2awztny6vyc-mneowdil
+**Document ID:** slvyxbjvxyq-mneowdl1
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,41 +10,43 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Scala: List Pipeline
+## Haskell: Filter and Map
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
-## JavaScript: Sum Array Elements
+## SQL: Group and Order
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+SQL query that groups by name and orders by count descending.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
-## Dart: Map Over List
+## Go: HTTP Server
 
-Dart example mapping over a list and printing the result.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
