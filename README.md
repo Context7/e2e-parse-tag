@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** x04fnw3skv-mp598cnu
+**Document ID:** mbq9q3u2j3-mp5dz73e
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,45 +10,39 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Swift: Map and Filter
+## TypeScript: Typed User Model
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## Go: HTTP Server
+## R: Vector Arithmetic
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Simple R vector example computing squares of a sequence.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
-## Dart: Map Over List
+## Scala: List Pipeline
 
-Dart example mapping over a list and printing the result.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
 }
 ```
 
