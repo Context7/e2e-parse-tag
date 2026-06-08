@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** yme13gk8xz-mq51vb9w
+**Document ID:** xlbna0qp3s-mq525puz
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -27,25 +27,13 @@ class Program {
 ```
 
 
-## PHP: JSON Response
+## Bash: Count Files
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Counts files in the current directory using common shell tools.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
-```
-
-
-## JavaScript: Sum Array Elements
-
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
-
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
