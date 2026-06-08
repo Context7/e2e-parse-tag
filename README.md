@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** gg5mquavaug-mq52d1j8
+**Document ID:** d8r66s3z1hu-mq52d1jx
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,37 +10,39 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## PHP: JSON Response
+## Scala: List Pipeline
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
-## TypeScript: Typed User Model
+## Haskell: Filter and Map
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
-## Ruby: Word Count
+## R: Vector Arithmetic
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Simple R vector example computing squares of a sequence.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
