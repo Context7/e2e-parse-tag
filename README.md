@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 8vqbjzswt5m-mqepvg6r
+**Document ID:** 710v8525rh-mqf6cjq9
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,43 +10,39 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Rust: Read Lines
+## Dart: Map Over List
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Dart example mapping over a list and printing the result.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
 ```
 
 
-## Kotlin: Data Class Copy
+## Julia: Comprehension
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+Julia list comprehension generating cubes of a range.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
-## R: Vector Arithmetic
+## Ruby: Word Count
 
-Simple R vector example computing squares of a sequence.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
