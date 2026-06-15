@@ -2,39 +2,13 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** bz8rvdwyjki-mqf6d6nl
+**Document ID:** q9fjm7vxi8-mqf7bvy3
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
 Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
-
-## Julia: Comprehension
-
-Julia list comprehension generating cubes of a range.
-
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
-```
-
-
-## Python: Fibonacci Generator
-
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
-
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
-```
-
 
 ## R: Vector Arithmetic
 
@@ -44,6 +18,32 @@ Simple R vector example computing squares of a sequence.
 nums <- 1:5
 squares <- nums^2
 print(squares)
+```
+
+
+## Ruby: Word Count
+
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
+```
+
+
+## Kotlin: Data Class Copy
+
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
