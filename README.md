@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 4zx2glzzndw-mqg5bilk
+**Document ID:** jdmkgbk3x4s-mqhkqqr6
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,41 +10,40 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Haskell: Filter and Map
+## SQL: Group and Order
 
-A minimal Haskell example filtering odd numbers and squaring them.
+SQL query that groups by name and orders by count descending.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
-## JavaScript: Sum Array Elements
+## Bash: Count Files
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Counts files in the current directory using common shell tools.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
-## C#: LINQ Query
+## Python: Fibonacci Generator
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
