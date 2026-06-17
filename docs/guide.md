@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** e3s1ug6a3nw-mqi5u0ce
+**Document ID:** 1he2h193g9z-mqi5u0ct
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,36 +10,42 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Rust: Read Lines
+## TypeScript: Typed User Model
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## Go: HTTP Server
+## Ruby: Word Count
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
+```
+
+
+## C#: LINQ Query
+
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
 }
 ```
 
