@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 2kfs3gph8cs-mqq5474i
+**Document ID:** yrsalkk1mxp-mqq54753
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,32 +10,36 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## C#: LINQ Query
+## JavaScript: Sum Array Elements
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
-## SQL: Group and Order
+## Julia: Comprehension
 
-SQL query that groups by name and orders by count descending.
+Julia list comprehension generating cubes of a range.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
+```
+
+
+## Elixir: Enum Pipeline
+
+Elixir pipeline that filters even numbers and inspects the result.
+
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
