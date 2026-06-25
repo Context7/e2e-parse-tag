@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** batp5cs7l08-mqt01n6m
+**Document ID:** c5pfl28xo3n-mqt01n6o
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,39 +10,28 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## SQL: Group and Order
+## Elixir: Enum Pipeline
 
-SQL query that groups by name and orders by count descending.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
-## Dart: Map Over List
+## Kotlin: Data Class Copy
 
-Dart example mapping over a list and printing the result.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
 }
-```
-
-
-## R: Vector Arithmetic
-
-Simple R vector example computing squares of a sequence.
-
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
 ```
 
 
