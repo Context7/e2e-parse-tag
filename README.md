@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** x6eukx17pyj-mqxajwhp
+**Document ID:** runr2yho2vl-mqxajwie
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,39 +10,40 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## JavaScript: Sum Array Elements
+## Python: Fibonacci Generator
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
-## Kotlin: Data Class Copy
+## Elixir: Enum Pipeline
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
-## R: Vector Arithmetic
+## Swift: Map and Filter
 
-Simple R vector example computing squares of a sequence.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
