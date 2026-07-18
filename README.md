@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** zop9mu5dail-mroev2mr
+**Document ID:** p7vsoiweaj-mrpu96m6
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,42 +10,38 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## SQL: Group and Order
+## Dart: Map Over List
 
-SQL query that groups by name and orders by count descending.
+Dart example mapping over a list and printing the result.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
-```
-
-
-## C#: LINQ Query
-
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
-
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
 ```
 
 
-## Bash: Count Files
+## Swift: Map and Filter
 
-Counts files in the current directory using common shell tools.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
+```
+
+
+## JavaScript: Sum Array Elements
+
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
