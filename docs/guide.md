@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** xbipdf8vczn-mru4pbmj
+**Document ID:** woeu7dnvl2-mrvk6969
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,50 +10,24 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Go: HTTP Server
+## R: Vector Arithmetic
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Simple R vector example computing squares of a sequence.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
-## C#: LINQ Query
+## Bash: Count Files
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Counts files in the current directory using common shell tools.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
-```
-
-
-## PHP: JSON Response
-
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
-
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
