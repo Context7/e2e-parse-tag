@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** fvtwsj2oc6e-mryf1f8b
+**Document ID:** sjn6vdujrr-mrzuf9nj
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,41 +10,36 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## SQL: Group and Order
+## R: Vector Arithmetic
 
-SQL query that groups by name and orders by count descending.
+Simple R vector example computing squares of a sequence.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
-## Scala: List Pipeline
+## Elixir: Enum Pipeline
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
-## PHP: JSON Response
+## JavaScript: Sum Array Elements
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
