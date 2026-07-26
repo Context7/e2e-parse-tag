@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 6ohpocg06am-mrzuf9o7
+**Document ID:** uf3a0w7j7yk-ms1a72ga
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,35 +21,30 @@ println(cubes)
 ```
 
 
-## Java: Stream Map/Filter
+## Swift: Map and Filter
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
-## SQL: Group and Order
+## C++: Transform Vector
 
-SQL query that groups by name and orders by count descending.
+C++ transforms a vector in-place and prints the results.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
