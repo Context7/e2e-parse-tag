@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** hfv6f8kjalq-msejojiw
+**Document ID:** mxkyqkqnsam-mseolj8m
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -36,17 +36,17 @@ print(list(fib(10)))
 ```
 
 
-## Scala: List Pipeline
+## Rust: Read Lines
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
