@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 8pryob4ll5w-mse4u9l9
+**Document ID:** kxot8om7prm-mse4u9ly
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,45 +10,38 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## SQL: Group and Order
+## Dart: Map Over List
 
-SQL query that groups by name and orders by count descending.
+Dart example mapping over a list and printing the result.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
-```
-
-
-## R: Vector Arithmetic
-
-Simple R vector example computing squares of a sequence.
-
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
-```
-
-
-## Go: HTTP Server
-
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
-
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
+```
+
+
+## Julia: Comprehension
+
+Julia list comprehension generating cubes of a range.
+
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
+```
+
+
+## JavaScript: Sum Array Elements
+
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
