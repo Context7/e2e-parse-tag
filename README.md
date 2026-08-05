@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 57eyrgqigj-msev1eo0
+**Document ID:** q57rpigxxk-msfk88ru
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -27,25 +27,33 @@ class Program {
 ```
 
 
-## R: Vector Arithmetic
+## Kotlin: Data Class Copy
 
-Simple R vector example computing squares of a sequence.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
-## Swift: Map and Filter
+## C++: Transform Vector
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+C++ transforms a vector in-place and prints the results.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
