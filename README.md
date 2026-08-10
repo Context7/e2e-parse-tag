@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 87ywukyvoe-msmogba7
+**Document ID:** s8rnyvgky5q-msmogbav
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,42 +10,36 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Haskell: Filter and Map
+## Bash: Count Files
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Counts files in the current directory using common shell tools.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
-## C#: LINQ Query
+## Elixir: Enum Pipeline
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
-## Ruby: Word Count
+## SQL: Group and Order
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+SQL query that groups by name and orders by count descending.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
