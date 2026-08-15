@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** i1oggqyqtm9-mssel9rr
+**Document ID:** qrtv8dr5rbg-mstszf9j
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,35 +10,28 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## JavaScript: Sum Array Elements
+## PHP: JSON Response
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
-## Haskell: Filter and Map
+## Kotlin: Data Class Copy
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
-```
-
-
-## Elixir: Enum Pipeline
-
-Elixir pipeline that filters even numbers and inspects the result.
-
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
