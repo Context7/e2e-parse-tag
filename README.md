@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ayp1qc9ijii-msv8l6ln
+**Document ID:** 7vcizmot31e-mswo13k8
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,31 +10,18 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## C#: LINQ Query
+## Python: Fibonacci Generator
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
-```
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
 
-
-## Elixir: Enum Pipeline
-
-Elixir pipeline that filters even numbers and inspects the result.
-
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+print(list(fib(10)))
 ```
 
 
@@ -55,6 +42,17 @@ class Main {
     System.out.println(doubledEvens);
   }
 }
+```
+
+
+## JavaScript: Sum Array Elements
+
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
