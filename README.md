@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 3qu2sptx9ze-msy3do1k
+**Document ID:** mu7zubw3xpp-msy3do28
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,43 +10,44 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Julia: Comprehension
+## Go: HTTP Server
 
-Julia list comprehension generating cubes of a range.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
-```
-
-
-## C#: LINQ Query
-
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
-
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
 
-## Ruby: Word Count
+## Bash: Count Files
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Counts files in the current directory using common shell tools.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
+```
+
+
+## SQL: Group and Order
+
+SQL query that groups by name and orders by count descending.
+
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
